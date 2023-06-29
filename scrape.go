@@ -18,7 +18,7 @@ func main() {
 
 	var article Article
 
-	c.OnHTML("h3.css-11ytn36 a", func(e *colly.HTMLElement) {
+	c.OnHTML("#collection-highlights-container > div > ol > li > article > div > h3 a", func(e *colly.HTMLElement) {
 		article.Title = e.Text
 	})
 
